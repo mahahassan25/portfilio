@@ -81,6 +81,7 @@
                         Skilled in understanding business needs, working in Agile teams,
                         and meeting deadlines. Committed to delivering quality solutions and continuously learning new technologies.
                     </p>
+                    <button type="button" class="btn btn-success" id="downloadPdfButton">Download Resume</button>
                 </div>
             </div>
         </div>
@@ -242,5 +243,18 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      document.getElementById('downloadPdfButton').addEventListener('click', function() {
+            const pdfUrl = 'https://drive.google.com/file/d/1RHLQx8OzQaBGgbwU-X5a43K7VRijzjDN/view?usp=sharing';
+
+            // Create a link element
+            const link = document.createElement('a');
+            link.href = pdfUrl; // Set the URL of the PDF
+            link.download = 'resume.pdf'; // Set the desired file name
+
+            // Programmatically trigger a click on the link
+            link.click();
+        });
+    </script>
 </body>
 </html>
